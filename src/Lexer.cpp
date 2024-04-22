@@ -44,7 +44,6 @@ void Lexer::Tokenise(std::vector<std::unique_ptr<BaseToken>>& Tokens){
 
     while (type != TokenType::END) {
         type = static_cast<TokenType>(yylex());
-        std::cout << enum_type_str(type) << " " << *YYText() << std::endl;
 
         if (yylineno_prev != yylineno){
             offset = 0;
